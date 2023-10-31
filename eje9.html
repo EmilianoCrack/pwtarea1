@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Mi página con barra de navegación</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <nav class="barra-navegacion">
+        <ul>
+            <li><a href="#seccion1">Sección 1</a></li>
+            <li><a href="#seccion2">Sección 2</a></li>
+            <li><a href="#seccion3">Sección 3</a></li>
+            <li><a href="https://www.tu-red-social-1.com">Red Social 1</a></li>
+            <li><a href="https://www.tu-red-social-2.com">Red Social 2</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido de las secciones -->
+    <section id="seccion1">
+        <!-- Contenido de la sección 1 -->
+    </section>
+    <section id="seccion2">
+        <!-- Contenido de la sección 2 -->
+    </section>
+    <section id="seccion3">
+        <!-- Contenido de la sección 3 -->
+    </section>
+</body>
+</html>
+<style>
+/* Estilos para la barra de navegación */
+.barra-navegacion {
+    background-color: #333; /* Fondo de la barra de navegación */
+    color: white; /* Color de fuente de los enlaces */
+    text-align: center;
+}
+
+.barra-navegacion ul {
+    list-style: none;
+    padding: 0;
+}
+
+.barra-navegacion li {
+    display: inline;
+    margin-right: 20px; /* Espacio entre los elementos de la barra */
+}
+
+.barra-navegacion a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s; /* Transición de color al hacer clic */
+}
+
+.barra-navegacion a:hover {
+    color: #ffcc00; /* Color al hacer hover sobre los enlaces */
+}
+
+/* Estilos para las secciones (para demostración) */
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
+</style>
+<a href="#seccion1">Sección 1</a>
+
+<section id="seccion1">
+    <h2>Sección 1</h2>
+    <img src="imagen1.jpg" alt="Pasatiempo 1">
+    <img src="imagen2.jpg" alt="Pasatiempo 2">
+</section>
+
+<section id="seccion2">
+    <h2>Sección 2</h2>
+    <img src="imagen3.jpg" alt="Pasatiempo 3">
+</section>
+<style>
+  /* Estilos para las imágenes */
+  img {
+      max-width: 100%;
+      height: auto;
+      cursor: pointer; /* Cambia el cursor al hacer clic en las imágenes */
+  }
+
+  /* Estilos para la galería emergente (inicialmente oculta) */
+  .galeria {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+  }
+
+  .galeria-imagen {
+      display: block;
+      margin: 20px auto;
+      max-width: 90%;
+      max-height: 90%;
+  }
+
+  /* Estilos para el botón de cierre en la galería emergente */
+  .cerrar-galeria {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+  }
+
+</style>
+<script>
+    const imagenes = document.querySelectorAll('img');
+    const galeria = document.querySelector('.galeria');
+    const galeriaImagen = document.querySelector('.galeria-imagen');
+    const cerrarGaleria = document.querySelector('.cerrar-galeria');
+
+    imagenes.forEach(imagen => {
+        imagen.addEventListener('click', () => {
+            galeria.style.display = 'block';
+            galeriaImagen.src = imagen.src;
+        });
+    });
+
+    cerrarGaleria.addEventListener('click', () => {
+        galeria.style.display = 'none';
+    });
+</script>
+<div class="galeria">
+    <span class="cerrar-galeria">&times;</span>
+    <img class="galeria-imagen" src="" alt="Imagen de la galería">
+</div>

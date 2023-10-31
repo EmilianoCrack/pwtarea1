@@ -1,0 +1,35 @@
+/* Estilos generales para la barra de navegación */
+.barra-navegacion {
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+/* Estilos generales para los enlaces en la barra de navegación */
+.barra-navegacion a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+/* Estilos generales para las secciones */
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
+
+/* Media query para pantallas más pequeñas (por ejemplo, dispositivos móviles) */
+@media (max-width: 768px) {
+    .barra-navegacion {
+        font-size: 14px; /* Cambiar el tamaño de fuente en pantallas más pequeñas */
+    }
+
+    .barra-navegacion li {
+        display: block; /* Convertir los elementos de la barra en bloques */
+        margin: 10px 0; /* Espacio vertical entre los elementos */
+    }
+
+    /* Otras adaptaciones de estilos aquí */
+}
